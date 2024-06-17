@@ -1,0 +1,215 @@
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    .logo {
+        height: auto;
+        cursor: pointer;
+        width: 200px;
+        margin-right: auto; /* Ensure the logo stays to the left */
+    }
+
+    .banner {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(img.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .navbar {
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 0 20px;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: #f37e0090;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    .navbar ul li a::after {
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #f37e0090;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: width 0.5s;
+    }
+
+    .navbar ul li a:hover::after {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #f37e0090;
+    }
+
+    .content h1 {
+        font-size: 70px;
+        margin-top: 80px;
+    }
+
+    .content p {
+        margin: 20px auto;
+        font-weight: 100;
+        line-height: 25px;
+    }
+
+    button {
+        width: 200px;
+        padding: 15px 0;
+        text-align: center;
+        margin: 20px 10px;
+        border-radius: 25px;
+        font-weight: bold;
+        border: 2px solid #7f4600cb;
+        background: transparent;
+        color: #fff;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    span {
+        background: #7f4600cb;
+        height: 100%;
+        width: 0;
+        border-radius: 25px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        transition: 0.7s;
+    }
+
+    button:hover span {
+        width: 100%;
+    }
+
+    button:hover {
+        border: none;
+    }
+
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 20px;
+        text-align: center; /* Align content horizontally */
+    }
+
+    .footer-section {
+        list-style-type: none;
+        padding: 0;
+        margin: 0 auto; /* Center the footer sections */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .footer-item {
+        padding: 5px 0;
+    }
+
+    .footer-item button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .footer-item button:hover {
+        background-color: #333;
+    }
+    /* Responsive Design */
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin: 10px 0;
+        }
+
+        .content h1 {
+            font-size: 50px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px 0;
+            margin: 10px 5px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content h1 {
+            font-size: 30px;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        button {
+            width: 100px;
+            padding: 10px 0;
+            margin: 5px;
+        }
+
+        footer {
+            text-align: left;
+        }
+
+        .footer-section {
+            display: block;
+            text-align: left;
+        }
+
+        .footer-item {
+            padding: 2px 0;
+        }
+    }
